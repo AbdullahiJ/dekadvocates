@@ -21,6 +21,8 @@ const nextConfig = {
     ]
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  trailingSlash: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://www.dekaadvocates.com' : '',
 }
 
 module.exports = nextConfig 
