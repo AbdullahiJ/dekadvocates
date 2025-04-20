@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'dekaadvocates.com', 'www.dekaadvocates.com'],
-    formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    unoptimized: false,
+    unoptimized: true,
   },
+  output: 'standalone',
   async headers() {
     return [
       {
@@ -18,17 +14,10 @@ const nextConfig = {
             key: 'X-Domain',
             value: 'dekaadvocates.com',
           },
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
         ],
       },
-    ]
+    ];
   },
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  trailingSlash: true,
-  compress: true,
-}
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig; 
