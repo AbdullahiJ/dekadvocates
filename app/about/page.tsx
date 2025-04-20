@@ -30,7 +30,7 @@ export default function About() {
       <section className="relative min-h-[40vh] w-full flex items-center justify-center bg-black">
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
-            src="/images/about us.png"
+            src="/images/about-us.png"
             alt="About Us Background"
             fill
             className="w-full h-full object-fill"
