@@ -7,7 +7,16 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'dekaadvocates.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.dekaadvocates.com',
+      }
     ],
+    unoptimized: true,
   },
   async headers() {
     return [
@@ -23,9 +32,6 @@ const nextConfig = {
     ]
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  experimental: {
-    appDir: false,
-  },
 }
 
 module.exports = nextConfig 
